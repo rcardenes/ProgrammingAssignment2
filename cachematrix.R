@@ -51,8 +51,8 @@ makeCacheMatrix <- function(x = matrix()) {
 cacheSolve <- function(x, ...) {
   inv <- x$getinv()
   if (is.null(inv)) {
-    inv <- solve(x$get())
-    x$setinv(inv, ...)
+    inv <- solve(x$get(), ...)
+    x$setinv(inv)
   }
   inv
 }
